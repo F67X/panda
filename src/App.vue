@@ -1,0 +1,33 @@
+<template>
+  <div id="app">
+    <el-row :gutter="15">
+      <!-- 顶部 -->
+      <BasePageTop />
+    
+      <el-col :span="3" >
+        <BaseNavgation />
+      </el-col>
+      <el-col :span="19">
+         <router-view></router-view>
+      </el-col>
+    </el-row>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'app',
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  /* margin-top: 60px; */
+}
+</style>
