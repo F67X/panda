@@ -1,4 +1,4 @@
-# mobile-app
+# Vue-admin-demo
 
 ## Project setup
 ```
