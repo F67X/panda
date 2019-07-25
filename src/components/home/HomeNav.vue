@@ -2,16 +2,16 @@
   <div class="home-nav">
     <nav class="menu">
       <li>
-        <span>Blog</span>
+        <router-link to="/user/">User</router-link>
       </li>
       <li>
-        <span>CODING</span>
+        <router-link to="/case/">CODING</router-link>
       </li>
       <li>
-        <span>微博</span>
+        <router-link to="/news/">微博</router-link>
       </li>
       <li>
-        <span>知乎</span>
+        <router-link to="/about/">知乎</router-link>
       </li>
     </nav>
   </div>
@@ -29,13 +29,12 @@ export default {
 </script>
 <style lang="scss">
 .home-nav {
-  height: calc(100% - 105px);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
+    width: 200px;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 10;
   nav {
     li {
       width: 200px;
@@ -44,7 +43,7 @@ export default {
   }
 }
 
-.menu span {
+.menu a {
   position: relative;
   display: inline-block;
   font-size: 20px;
@@ -56,16 +55,16 @@ export default {
   margin-bottom: 10px;
   cursor: pointer;
 }
-.menu span:hover {
+.menu a:hover {
   color: rgba($color: #000, $alpha: 0.7);
 }
-.menu span:hover:after,
-.menu span:hover:before {
+.menu a:hover:after,
+.menu a:hover:before {
   width: 100%;
   left: 0;
 }
-.menu span:after,
-.menu span:before {
+.menu a:after,
+.menu a:before {
   content: "";
   position: absolute;
   top: calc(100% + 5px);
@@ -73,12 +72,12 @@ export default {
   right: 0;
   height: 3px;
 }
-.menu span:before {
+.menu a:before {
   -webkit-transition: width 0.25s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   transition: width 0.25s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
   background: #2196f3;
 }
-.menu span:after {
+.menu a:after {
   -webkit-transition: width 0.3s cubic-bezier(0.29, 0.18, 0.26, 0.83);
   transition: width 0.3s cubic-bezier(0.29, 0.18, 0.26, 0.83);
   background: #7d7d7d;

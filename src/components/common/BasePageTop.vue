@@ -1,23 +1,52 @@
 <template>
-  <div>
-    <header class="headers">
-      <el-row>
-        <el-col :span="12" :offset="7">
-          <el-col :span="4"><router-link to="/">首页</router-link></el-col>
-          <el-col :span="4"><router-link to="product">产品</router-link></el-col>
-          <el-col :span="4"><router-link to="case">案例</router-link></el-col>
-          <el-col :span="4"><router-link to="news">新闻</router-link></el-col>
-          <el-col :span="4"><router-link to="about">关于</router-link></el-col>
-        </el-col>
-      </el-row>
+  <div class="home-header">
+    <header>
+      <el-button v-if="hasBack" icon="el-icon-d-arrow-left" @click="backPrevUrl">首页</el-button>
+      <h1 class="titles">P A N D A</h1>
     </header>
   </div>
 </template>
-<style>
-header.headers {
-  height: 60px;
-  line-height: 60px;
-  border-bottom: 1px solid #eee;
+<script>
+export default {
+  name: "pageTop",
+  props: {
+    hasBack: Boolean
+  },
+  data() {
+    return {};
+  },
+  created() {},
+  mounted() {},
+  methods: {
+    backPrevUrl() {
+      console.log(this);
+      this.$router.push("/");
+    }
+  }
+};
+</script>
+<style lang="scss">
+.home-header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  .el-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: transparent;
+    color: #fff;
+    border: none;
+  }
+  .titles {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    line-height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    font-family: "微软雅黑";
+  }
 }
 </style>
-

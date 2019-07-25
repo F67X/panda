@@ -1,50 +1,135 @@
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
-  margin:0; padding:0;
-  font: 14px 微软雅黑 Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif;
-  font-family:微软雅黑 Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif !important;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+    sans-serif;
 }
-body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
-h1, h2, h3, h4, h5, h6{ font-size:100%; }
-address, cite, dfn, em, var { font-style:normal; }
-code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
-small{ font-size:12px; }
-ul, ol ,li{ list-style:none; }
-a { text-decoration:none; }
-a:hover { text-decoration:underline; }
-sup { vertical-align:text-top; }
-sub{ vertical-align:text-bottom; }
-legend { color:#000; }
-fieldset, img { border:0; }
-button, input, select, textarea { font-size:100%; border-style: none; }
-table { border-collapse:collapse; border-spacing:0; }
-
-a:hover, a:visited, a:link, a:active {
-  text-decoration: none; color: #000;
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  border-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-i{font-style: normal;}
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: #000;
+}
 
-html,body{
+i {
+  font-style: normal;
+}
+
+html,
+body {
   width: 100%;
   height: 100%;
   background: #f2f2f2;
 }
 
-
 select {
   /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-  border: 1px solid #D2D2D2 !important;
+  border: 1px solid #d2d2d2 !important;
   /*很关键：将默认的select选择框样式清除*/
   /*appearance:none; */
   /*-moz-appearance:none; */
   /*-webkit-appearance:none; */
   /*将背景改为红色*/
-  background:#FFF;
+  background: #fff;
   /*加padding防止文字覆盖*/
   /*padding-right: 14px; */
 }
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-select::-ms-expand { display: none; }
+select::-ms-expand {
+  display: none;
+}
 
 /**
 .selector { width: 2rem; border: 1px solid #ddd; }
@@ -53,7 +138,7 @@ select::-ms-expand { display: none; }
 [data-dpr="3"] .selector { height: 96px; font-size: 42px; }
 **/
 // elemnet ui  下拉框 横向滚动条隐藏
-.el-scrollbar__wrap{
+.el-scrollbar__wrap {
   overflow-x: hidden !important;
   overflow-y: scroll !important;
 }

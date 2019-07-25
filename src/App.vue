@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <el-col :span="24">
-      <router-view></router-view>
+      <transition>
+        <router-view></router-view>
+      </transition>
     </el-col>
   </div>
 </template>

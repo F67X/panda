@@ -9,29 +9,37 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
-    },
-    {
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      path: '/product',
-      name: 'product',
-      component: () => import('./views/Product.vue')
-    },
-    {
-      path: '/case',
-      name: 'case',
-      component: () => import('./views/Case.vue')
-    }, {
-      path: '/news',
-      name: 'news',
-      component: () => import('./views/News.vue')
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
+      component: Home,
+      redirect: '/index', //改变指向
+      children: [
+        {
+          path: 'index',
+          name: 'index',
+          component: () => import('@/components/home/HomeDefault')
+        },
+        {
+          // route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          path: 'user',
+          name: 'user',
+          component: () => import('@/views/User.vue')
+        },
+        {
+          path: 'case',
+          name: 'case',
+          component: () => import('@/views/Case.vue')
+        }, {
+          path: 'news',
+          name: 'news',
+          component: () => import('@/views/News.vue')
+        },
+        {
+          path: 'about',
+          name: 'about',
+          component: () => import('@/views/About.vue')
+        }
+      ]
     }
   ]
 })

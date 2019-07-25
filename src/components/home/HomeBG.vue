@@ -8,11 +8,11 @@ export default {
   name: "canvasbg",
   data() {
     return {
-        canvas:null,
-        points:[],
-        color:[0,0,0],
-        colorChange:2,
-        timer:30,
+      canvas: null,
+      points: [],
+      color: [0, 0, 0],
+      colorChange: 2,
+      timer: 30
     };
   },
   created() {},
@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     clearCanvas() {
-      console.log(this.canvas.width);
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.points = [];
       this.createPoints();
@@ -138,6 +137,7 @@ export default {
   position: absolute;
   left: 0%;
   top: 0;
+  z-index: 1
 }
 #canvas {
   height: 100%;

@@ -1,23 +1,22 @@
 <template>
   <div class="home">
-    <BasePageTop :hasBack="hasBack" />
-    <transition>
-      <router-view></router-view>
-    </transition>
-    <BasePageBottom />
+    <Nav />
+    <BGCanvas ref="CBG"  @click="changeBg" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Nav from "@/components/home/HomeNav";
+import BGCanvas from "@/components/home/HomeBG";
 export default {
   name: "home",
-  components: {},
+  components: {
+    Nav,
+    BGCanvas
+  },
   data() {
-    return {
-      hasBack:false
-    };
+    return {};
   },
   mounted() {},
   methods: {
@@ -31,7 +30,8 @@ export default {
 .home {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 </style>
 
