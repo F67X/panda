@@ -40,8 +40,78 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-size: 100%;
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+/*moje*/
+.h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.3;
+  color: inherit;
+}
+h1,
+.h1 {
+  font-size: 1.8rem;
+}
+h2,
+.h2 {
+  font-size: 1.55rem;
+}
+h3,
+.h3 {
+  font-size: 1.3rem;
+}
+h4,
+.h4 {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #808080;
+}
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+h6,
+.h6 {
+  font-size: 1rem;
+}
+.a-0 {
+  opacity: 0
+}
+.a-1 {
+  opacity: 0.1
+}
+.a-2 {
+  opacity: 0.2
+}
+.a-3 {
+  opacity: 0.3
+}
+.a-4 {
+  opacity: 0.4
+}
+.a-5 {
+  opacity: 0.5
+}
+.a-6 {
+  opacity: 0.6
+}
+.a-7 {
+  opacity: 0.7
+}
+.a-8 {
+  opacity: 0.8
+}
+.a-9 {
+  opacity: 0.9
+}
+.a-10 {
+  opacity: 1
 }
 address,
 cite,
@@ -69,6 +139,10 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+a:focus, a:hover {
+  color: #000;
+  text-decoration: none;
 }
 sup {
   vertical-align: text-top;
@@ -112,7 +186,7 @@ body {
   width: 100%;
   height: 100%;
   background: #f2f2f2;
-  font-size:16px;
+  font-size: 16px;
 }
 
 select {
