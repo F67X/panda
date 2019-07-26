@@ -2,10 +2,10 @@
   <div class="home-nav">
     <nav class="menu">
       <li>
-        <router-link to="/user/">User</router-link>
+        <router-link to="/show/">作品展示</router-link>
       </li>
       <li>
-        <router-link to="/case/">CODING</router-link>
+        <router-link to="/case/">关于PANDA</router-link>
       </li>
       <li>
         <router-link to="/news/">微博</router-link>

@@ -30,6 +30,7 @@ export default {
   width: 100%;
   position: relative;
   top: 0;
+  z-index: 22;
   .el-button {
     position: absolute;
     left: 10px;
